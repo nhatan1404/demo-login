@@ -1,0 +1,142 @@
+<%- include('layouts/header'); %>
+  <div class="max-w-lg mx-auto bg-white shadow-xl rounded my-8">
+    <div id="alert-register" class="hidden flex p-4 mb-4 bg-blue-100 rounded-lg dark:bg-blue-200" role="alert">
+      <svg class="flex-shrink-0 w-5 h-5 text-blue-700 dark:text-blue-800" fill="currentColor" viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+          d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+          clip-rule="evenodd"></path>
+      </svg>
+      <div class="ml-3 text-sm font-medium text-blue-700 dark:text-blue-800">
+        Đăng ký thành công, <a href="#"
+          class="font-semibold underline hover:text-blue-800 dark:hover:text-blue-900">đăng
+          nhập ngay</a> nếu bạn muốn.
+      </div>
+      <button type="button"
+        class="ml-auto -mx-1.5 -my-1.5 bg-blue-100 text-blue-500 rounded-lg focus:ring-2 focus:ring-blue-400 p-1.5 hover:bg-blue-200 inline-flex h-8 w-8 dark:bg-blue-200 dark:text-blue-600 dark:hover:bg-blue-300"
+        data-collapse-toggle="alert-1" aria-label="Close">
+        <span class="sr-only">Close</span>
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="text-center text-gray-600 py-4 mt-2">Đăng ký với</div>
+    <div class="flex justify-center mb-10">
+      <a href="/auth/facebook"
+        class="flex items-center bg-blue-600 shadow-md border bg-blue-700 rounded px-4 py-2 mr-2">
+        <svg class="h-5 w-5 text-white" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" />
+          <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+        </svg>
+        <span class="ml-1 text-white">Facebook</span>
+      </a>
+
+      <a href="/auth/google"
+        class="flex items-center bg-red-600 shadow-md border border-red-700 rounded px-4 py-2 mr-2">
+        <svg class="h-5 w-5 text-white" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" />
+          <path d="M17.788 5.108A9 9 0 1021 12h-8" />
+        </svg>
+        <span class="ml-1 text-white">Google</span>
+      </a>
+
+      <a href="/auth/github"
+        class="flex items-center bg-gray-700 shadow-md border border-gray-800 rounded px-4 py-2 mr-2">
+        <svg class="h-5 w-5 text-white" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" />
+          <path
+            d="M9 19c-4.286 1.35-4.286-2.55-6-3m12 5v-3.5c0-1 .099-1.405-.5-2 2.791-.3 5.5-1.366 5.5-6.04a4.567 4.567 0 0 0 -1.333 -3.21 4.192 4.192 0 00-.08-3.227s-1.05-.3-3.476 1.267a12.334 12.334 0 0 0 -6.222 0C6.462 2.723 5.413 3.023 5.413 3.023a4.192 4.192 0 0 0 -.08 3.227A4.566 4.566 0 004 9.486c0 4.64 2.709 5.68 5.5 6.014-.591.589-.56 1.183-.5 2V21" />
+        </svg>
+        <span class="ml-1 text-white">GitHub</span>
+      </a>
+
+      <a href="/auth/twitter"
+        class="flex items-center bg-blue-400 shadow-md border border-blue-500 rounded px-4 py-2 mr-2">
+        <svg class="h-5 w-5 text-white" width="24" height="24" viewBox="0 0 24 24" stroke-width="2"
+          stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" />
+          <path
+            d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497 -3.753C20.18 7.773 21.692 5.25 22 4.009z" />
+        </svg>
+        <span class="ml-1 text-white">Twitter</span>
+      </a>
+    </div>
+
+    <div class=" bg-gray-100 pt-8 pb-16">
+      <div class="text-center text-gray-600 mb-6">Hoặc đăng ký bằng email</div>
+      <form method="post" action="">
+        <div class="w-4/5 mx-auto">
+
+          <div class="flex flex-col mb-4">
+            <div class="flex items-center bg-white rounded shadow-md mb-1">
+              <span class="px-3">
+                <svg class="fill-current text-gray-500 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path
+                    d="M18 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h16zm-4.37 9.1L20 16v-2l-5.12-3.9L20 6V4l-10 8L0 4v2l5.12 4.1L0 14v2l6.37-4.9L10 14l3.63-2.9z" />
+                </svg>
+              </span>
+              <input id="fullName" class="w-full h-12 focus:outline-none" type="text" name="fullName"
+                placeholder="Họ tên" oninput="removeMsgError('fullName', 'msg-fullName')">
+            </div>
+            <p class="text-red-500 text-xs italic hidden" id="msg-fullName">a</p>
+          </div>
+
+          <div class="flex flex-col mb-4">
+            <div class="flex items-center bg-white rounded shadow-md mb-1">
+              <span class="px-3">
+                <svg class="fill-current text-gray-500 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path
+                    d="M18 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h16zm-4.37 9.1L20 16v-2l-5.12-3.9L20 6V4l-10 8L0 4v2l5.12 4.1L0 14v2l6.37-4.9L10 14l3.63-2.9z" />
+                </svg>
+              </span>
+              <input id="email" class="w-full h-12 focus:outline-none" type="email" name="email" placeholder="Email"
+                oninput="removeMsgError('email', 'msg-email')">
+            </div>
+            <p class="text-red-500 text-xs italic hidden" id="msg-email">a</p>
+          </div>
+
+          <div class="flex flex-col mb-4">
+            <div class="flex items-center bg-white rounded shadow-md mb-1">
+              <span class="px-3">
+                <svg class="fill-current text-gray-500 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path
+                    d="M4 8V6a6 6 0 1 1 12 0h-3v2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
+                </svg>
+              </span>
+              <input id="password" class="w-full h-12 focus:outline-none" type="password" name="password"
+                placeholder="********" oninput="removeMsgError('password', 'msg-password')">
+            </div>
+            <p class="text-red-500 text-xs italic hidden" id="msg-password">b</p>
+          </div>
+
+          <div class="flex flex-col mb-4">
+            <div class="flex items-center bg-white rounded shadow-md mb-1">
+              <span class="px-3">
+                <svg class="fill-current text-gray-500 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                  <path
+                    d="M4 8V6a6 6 0 1 1 12 0h-3v2h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
+                </svg>
+              </span>
+              <input id="repassword" class="w-full h-12 focus:outline-none" type="password" name="repassword"
+                placeholder="********" oninput="removeMsgError('repassword', 'msg-repassword')">
+            </div>
+            <p class="text-red-500 text-xs italic hidden" id="msg-repassword">b</p>
+          </div>
+
+          <button type="button" onclick="register()"
+            class="bg-indigo-600 block mx-auto text-white text-sm uppercase rounded shadow-md px-6 py-2">Đăng
+            Ký</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <%- include('layouts/footer'); %>
